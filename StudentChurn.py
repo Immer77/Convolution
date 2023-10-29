@@ -83,14 +83,13 @@ scaler.fit(x_train)
 
 xtrain = scaler.transform(x_train)
 xtest = scaler.transform(x_test)
-print(xtrain)
+
 # Now we need to train our model
 from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 
-mlp = MLPClassifier(hidden_layer_sizes=(10, 10), max_iter=1000, random_state=1)
+mlp = MLPClassifier(hidden_layer_sizes=(5, 10), max_iter=1000, random_state=1)
 mlp.fit(xtrain, y_train.values)
-
 # Predicting the value Brug af x test
 predictions = mlp.predict(xtest)
 matrix = confusion_matrix(predictions, y_test)
@@ -103,6 +102,7 @@ print(matrix)
 print("Classification")
 print(report)
 print(f"Accuracy: {accuracy * 100:.2f}%")
+
 
 
 

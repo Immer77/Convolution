@@ -8,4 +8,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="NeuralNet" />
   </component>
+  <component name="SonarLintModuleSettings">
+    <option name="uniqueId" value="afd2743b-9c7d-4822-b420-dc74c6441d52" />
+  </component>
 </module>
